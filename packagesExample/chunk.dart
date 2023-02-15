@@ -23,14 +23,6 @@ void main(List<String> args) async {
   jokes.forEach((element) {print('# $element \n');});
 }
 
-Future<String> printChuck(List arr) async {
-  String result = "1";
-  for (var element in arr) {
-    result += element.toString();
-  }
-  return result;
-}
-
 Future<http.Response> getChuck(String host, String path) async {
   Uri url = Uri.https(host, path);
   var response = await http.get(url);
